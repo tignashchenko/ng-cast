@@ -11,7 +11,17 @@ angular.module('video-player')
       this.video = this.videos[index];
 
     };
+
+    this.searchResults = (data) => {
+      // this.video = this.data[0];
+      // this.videos = this.data;
+      // console.log(this.service);
+      console.log(data);
+    };
   },
+
+  
 
   templateUrl: 'src/templates/app.html'
 });
+
