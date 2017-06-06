@@ -4,14 +4,13 @@ angular.module('video-player')
   // TODO
 
   bindings: {
-    search: '<',
-    input: '<'
+    search: '<'
+
   },
 
   controller: function() {
     //Invoke youtube function here
     // console.log(data);
-
   },
 
   templateUrl: 'src/templates/search.html'

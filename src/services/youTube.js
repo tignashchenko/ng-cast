@@ -5,7 +5,7 @@ angular.module('video-player')
     return $http({
       method: 'GET',
       url: 'https://www.googleapis.com/youtube/v3/search',
-      data: {
+      params: {
         key: window.YOUTUBE_API_KEY,
         q: searchQuery,
         type: 'video',
@@ -13,9 +13,9 @@ angular.module('video-player')
         maxResults: 5,
         videoEmbeddable: 'true'
       }
-    }).then(function successCallback() {
-      console.log('this workedd');
-      callback();
+    }).then(function successCallback(data) {
+      // console.log(data.data.items);
+      callback(data.data.items);
     }, function errorCallBack() {
       console.log('this didnt work');
     });    
